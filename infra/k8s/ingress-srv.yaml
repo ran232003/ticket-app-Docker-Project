@@ -40,5 +40,12 @@ spec:
                 name: auth-srv
                 port:
                   number: 4000
+          - path: /*
+            pathType: Prefix
+            backend:
+              service:
+                name: client-srv
+                port:
+                  number: 3000
 #/api/comment/addComment/?(*) the star is regular expression, and can be anything
 #in our case it will be the Postid
